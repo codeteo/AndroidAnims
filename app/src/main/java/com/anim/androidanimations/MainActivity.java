@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnViewProperty, btnConstraintAnim;
+    private Button btnViewProperty, btnConstraintAnim, btnCustomConstraintAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         btnConstraintAnim = findViewById(R.id.btn_constraint_anim);
         btnConstraintAnim.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ConstraintAnimActivity.class);
+            startActivity(intent);
+        });
+
+        btnCustomConstraintAnim = findViewById(R.id.btn_constraint_custom_anim);
+        btnCustomConstraintAnim.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CustomConstraintAnimActivity.class);
             startActivity(intent);
         });
 
