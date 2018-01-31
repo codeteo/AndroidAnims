@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_custom"
     android:background="@color/colorPrimary"
-    android:focusable="true" android:focusableInTouchMode="true"
+    android:focusable="false" android:focusableInTouchMode="false"
     android:layout_width="match_parent" android:layout_height="match_parent"
     tools:context=".CustomConstraintAnimActivity">
 
@@ -11,29 +11,23 @@
         android:id="@+id/et_profession"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginTop="24dp" android:ems="10" android:inputType="textPersonName" android:hint="Profession"
-        android:imeOptions="actionNext"
-        android:focusable="true"
-        android:nextFocusForward="@+id/et_company"
         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_company"
+        android:visibility="gone"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginTop="48dp" android:ems="10" android:inputType="textPersonName" android:hint="company"
-        android:imeOptions="actionNext"
-        android:focusable="true"
-        android:nextFocusForward="@+id/et_industry"
         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_profession" />
 
     <EditText
         android:id="@+id/et_industry"
+        android:visibility="gone"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginTop="48dp" android:ems="10" android:inputType="textPersonName" android:hint="Industry"
-        android:imeOptions="actionDone"
-        android:focusable="true"
         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_company" />
 

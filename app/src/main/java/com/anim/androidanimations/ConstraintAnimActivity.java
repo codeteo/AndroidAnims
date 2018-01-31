@@ -7,7 +7,6 @@ import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.ChangeBounds;
 import android.transition.TransitionManager;
-import android.util.Log;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.ImageView;
 
@@ -29,11 +28,9 @@ public class ConstraintAnimActivity extends AppCompatActivity {
         ivBackground.setOnClickListener(v -> {
 
             if (show) {
-                Log.i("TAG", "HIDE");
                 hideComponents();
                 show = false;
             } else {
-                Log.i("TAG", "SHOW");
                 showComponents();
                 show = true;
             }
